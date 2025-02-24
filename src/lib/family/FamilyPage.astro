@@ -1,12 +1,12 @@
 ---
-import Welcome from "../home/Welcome.astro";
-import Layout from "../_ui/layouts/Layout.astro";
-import NavBar from "../_ui/navigation/NavBar.astro";
 import FamilyMemberList from "../family/_ui/FamilyMemberList.astro";
+import HolzbrookLogo from "../home/HolzbrookLogo.astro";
+import NavBar from "../navigation/NavBar.astro";
+import CommonPage from "../_page/CommonPage.astro";
 ---
 
-<Layout>
-	<Welcome />
+<CommonPage>
+	<HolzbrookLogo />
 	<NavBar />
 	<FamilyMemberList />
-</Layout>
+</CommonPage>

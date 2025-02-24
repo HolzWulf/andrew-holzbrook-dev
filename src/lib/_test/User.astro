@@ -2,13 +2,13 @@
 const response = await fetch("https://randomuser.me/api/");
 const data = await response.json();
 const randomUser: {
-    name: {
-        first: String;
-        last: String;
-    };
-    location: {
-        city: String;
-    };
+  name: {
+    first: String;
+    last: String;
+  };
+  location: {
+    city: String;
+  };
 } = data.results[0];
 ---
 

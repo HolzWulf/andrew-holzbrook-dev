@@ -7,10 +7,10 @@ import { wren } from "./Wren/wren.FamilyMember";
 import type { FamilyMember } from "./_type/familyMember/FamilyMember";
 
 export const familyMembers: FamilyMember[] = [
-    andrew,
-    brooke,
-    oakley,
-    finn,
-    leo,
-    wren,
+  andrew,
+  brooke,
+  oakley,
+  finn,
+  leo,
+  wren,
 ];
