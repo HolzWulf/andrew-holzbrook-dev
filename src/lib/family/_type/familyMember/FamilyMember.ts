@@ -1,7 +1,6 @@
-
 export interface FamilyMember {
-    firstName: String;
-    middleName: String;
-    lastName: String;
-    dateOfBirth: String;
+  firstName: String;
+  middleName: String;
+  lastName: String;
+  dateOfBirth: String;
 }

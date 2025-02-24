@@ -2,15 +2,15 @@
 import type { FamilyMember } from "../_type/familyMember/FamilyMember";
 
 interface Props {
-    familyMember: FamilyMember;
+  familyMember: FamilyMember;
 }
 
 const {
-    familyMember: { firstName, dateOfBirth },
+  familyMember: { firstName, dateOfBirth },
 }: Props = Astro.props;
 ---
 
 <li>
-    <h2>{firstName}</h2>
-    <p>Date: {dateOfBirth}</p>
+  <h2>{firstName}</h2>
+  <p>Date: {dateOfBirth}</p>
 </li>
