@@ -1,0 +1,12 @@
+---
+import FamilyMemberListItem from "./FamilyMemberListItem.astro";
+import { familyMembers } from "../familyMembers";
+---
+
+<ul>
+    {
+        familyMembers.map((familyMember) => (
+            <FamilyMemberListItem familyMember={familyMember} />
+        ))
+    }
+</ul>
