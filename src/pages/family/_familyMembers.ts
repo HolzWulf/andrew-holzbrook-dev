@@ -1,9 +1,9 @@
-import { andrew } from "./Andrew/andrew.FamilyMember";
-import { brooke } from "./Brooke/brooke.FamilyMember";
-import { finn } from "./Finn/finn.FamilyMember";
-import { leo } from "./Leo/leo.FamilyMember";
-import { oakley } from "./Oakley/oakley.FamilyMember";
-import { wren } from "./Wren/wren.FamilyMember";
+import { andrew } from "./_andrew.FamilyMember";
+import { brooke } from "./_brooke.FamilyMember";
+import { finn } from "./_finn.FamilyMember";
+import { leo } from "./_leo.FamilyMember";
+import { oakley } from "./_oakley.FamilyMember";
+import { wren } from "./_wren.FamilyMember";
 import type { FamilyMember } from "./_type/familyMember/FamilyMember";
 
 export const familyMembers: FamilyMember[] = [
