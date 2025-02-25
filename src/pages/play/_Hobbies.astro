@@ -1,0 +1,15 @@
+---
+import Card from "../../lib/ui/Card.astro";
+
+const hobbies = ["Disc Golf", "Boardgames", "Videogames", "Reading"];
+---
+
+<div class="space-y-6">
+    {
+        hobbies.map((hobby) => (
+            <Card key={hobby}>
+                <h2 class="text-xl font-semibold text-gray-800">{hobby}</h2>
+            </Card>
+        ))
+    }
+</div>

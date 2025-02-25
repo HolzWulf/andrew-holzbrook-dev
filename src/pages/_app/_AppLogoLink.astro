@@ -1,0 +1,10 @@
+---
+import { makeSherpa } from "../_sherpa";
+import AppLogo from "./_AppLogo.astro";
+
+const sherpa = makeSherpa();
+---
+
+<a href={sherpa.home({})}>
+  <AppLogo />
+</a>

@@ -1,13 +1,14 @@
 ---
-import AppNavBar from "./_app/_AppNavBar.astro";
+import AppHeaderCommon from "./_app/_AppHeaderCommon.astro";
+import AppHeaderSimple from "./_app/_AppHeaderSimple.astro";
 import AppPage from "./_app/_AppPage.astro";
 import AppPageBody from "./_app/_AppPageBody.astro";
-import MeCard from "./_meCard.astro";
+import HomePageSections from "./_homePageSections.astro";
 ---
 
 <AppPage>
-    <AppNavBar />
+    <AppHeaderSimple />
     <AppPageBody>
-        <MeCard />
+        <HomePageSections />
     </AppPageBody>
 </AppPage>
