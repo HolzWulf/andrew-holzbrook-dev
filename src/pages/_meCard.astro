@@ -1,19 +1,24 @@
 ---
 import Box from "../lib/ui/Box.astro";
+import Card from "../lib/ui/Card.astro";
 import HStack from "../lib/ui/HStack.astro";
 import Stack from "../lib/ui/Stack.astro";
 import VStack from "../lib/ui/VStack.astro";
 ---
 
-<VStack class="p-10 bg-white rounded-lg shadow-lg gap-8">
-    <HStack spacing="6">
-        <Box class="w-20 h-20 bg-orange-600 rounded-full" />
-        <Stack direction="column" spacing="2">
-            <h1 class="text-3xl font-bold text-gray-800">Andrew Hol(z)brook</h1>
-            <h2 class="text-lg text-gray-500">Front End Engineer</h2>
-        </Stack>
-    </HStack>
-    <Box class="w-full h-64 bg-gray-200 rounded-lg p-4">
-        Main Content Here
-    </Box>
-</VStack>
+<Card>
+    <VStack class="gap-2">
+        <HStack spacing="6">
+            <Box class="w-20 h-20 bg-orange-600 rounded-full" />
+            <Stack direction="column" spacing="2">
+                <h1 class="text-3xl font-bold text-gray-800">
+                    Andrew Hol(z)brook
+                </h1>
+                <h2 class="text-lg text-gray-500">Front End Engineer</h2>
+            </Stack>
+        </HStack>
+        <Box class="w-full h-64 bg-gray-200 rounded-lg p-4">
+            Main Content Here
+        </Box>
+    </VStack>
+</Card>
