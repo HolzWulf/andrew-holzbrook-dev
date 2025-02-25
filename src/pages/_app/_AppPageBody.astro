@@ -1,12 +1,14 @@
-<body>
-    <slot />
-</body>
+---
+import Stack from "../../lib/ui/Stack.astro";
 
-<style>
-    html,
-    body {
-        margin: 0;
-        width: 100%;
-        height: 100%;
-    }
-</style>
+interface Props {
+    class?: string;
+}
+
+const props: Props = Astro.props;
+const className = props.class ?? "";
+---
+
+<Stack class={`h-screen bg-gray-100 ${className}`}>
+    <slot />
+</Stack>
