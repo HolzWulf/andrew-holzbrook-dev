@@ -4,7 +4,7 @@ import { finn } from "./_finn.FamilyMember";
 import { leo } from "./_leo.FamilyMember";
 import { oakley } from "./_oakley.FamilyMember";
 import { wren } from "./_wren.FamilyMember";
-import type { FamilyMember } from "./_type/familyMember/FamilyMember";
+import type { FamilyMember } from "../FamilyMember";
 
 export const familyMembers: FamilyMember[] = [
   andrew,

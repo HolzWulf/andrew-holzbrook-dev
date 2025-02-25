@@ -1,4 +1,4 @@
-import type { FamilyMember } from "./_type/familyMember/FamilyMember";
+import type { FamilyMember } from "../FamilyMember";
 
 export const oakley: FamilyMember = {
   firstName: "Oakley",
