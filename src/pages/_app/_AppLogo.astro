@@ -1,5 +1,10 @@
 ---
+import { makeSherpa } from "../_sherpa/Sherpa";
 
+const sherpa = makeSherpa();
 ---
 
-<img src="./logo-placeholder.jpg" alt="Andrew Hol(z)brook | Placeholder Logo" />
+<img
+    src={sherpa.resources.logo({})}
+    alt="Andrew Hol(z)brook | Placeholder Logo"
+/>

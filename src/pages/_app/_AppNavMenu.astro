@@ -4,15 +4,16 @@
  *
  * Navigation component with customizable links.
  */
-import { makeSherpa } from "../../pages/_sherpa";
+import { makeSherpa } from "../_sherpa/Sherpa";
+import AppLink from "./_AppLink.astro";
 
 const sherpa = makeSherpa();
 ---
 
 <nav>
     <ul class="flex gap-6 text-lg mx-4">
-        <li><a href={sherpa.work({})}>Work</a></li>
-        <li><a href={sherpa.family({})}>Family</a></li>
-        <li><a href={sherpa.play({})}>Play</a></li>
+        <li><AppLink href={sherpa.work.index({})}>Work</AppLink></li>
+        <li><AppLink href={sherpa.family.index({})}>Family</AppLink></li>
+        <li><AppLink href={sherpa.play.index({})}>Play</AppLink></li>
     </ul>
 </nav>
