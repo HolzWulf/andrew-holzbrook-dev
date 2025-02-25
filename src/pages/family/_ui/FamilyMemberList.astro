@@ -1,12 +1,13 @@
 ---
 import FamilyMemberListItem from "./FamilyMemberListItem.astro";
 import { familyMembers } from "../_familyMembers";
+import VStack from "../../../lib/ui/VStack.astro";
 ---
 
-<ul>
+<VStack as="ul" class="px-8 gap-4">
   {
     familyMembers.map((familyMember) => (
       <FamilyMemberListItem familyMember={familyMember} />
     ))
   }
-</ul>
+</VStack>

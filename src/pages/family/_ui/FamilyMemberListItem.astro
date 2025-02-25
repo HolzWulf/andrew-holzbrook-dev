@@ -1,4 +1,5 @@
 ---
+import Card from "../../../lib/ui/Card.astro";
 import type { FamilyMember } from "../_type/familyMember/FamilyMember";
 
 interface Props {
@@ -6,11 +7,11 @@ interface Props {
 }
 
 const {
-  familyMember: { firstName, dateOfBirth },
+  familyMember: { firstName, middleName, lastName, dateOfBirth },
 }: Props = Astro.props;
 ---
 
-<li>
-  <h2>{firstName}</h2>
-  <p>Date: {dateOfBirth}</p>
-</li>
+<Card as="li">
+  <h2>{firstName} {middleName} {lastName}</h2>
+  <p>Birthday: {dateOfBirth}</p>
+</Card>
