@@ -1,4 +1,6 @@
-interface CommonQueryParams {}
+import type { FeatureFlags } from "./FeatureFlags";
+
+interface CommonQueryParams { }
 
 interface LinkProps {
   commonQueryParams?: CommonQueryParams;
@@ -12,10 +14,6 @@ function makeLinkResolver(
   sherpaConfig: SherpaConfig,
 ): string {
   return path;
-}
-
-interface FeatureFlags {
-  testPageEnabled: boolean;
 }
 
 interface SherpaConfig {
