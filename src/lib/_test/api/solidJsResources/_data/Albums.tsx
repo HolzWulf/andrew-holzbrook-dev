@@ -1,5 +1,6 @@
 import { createResource, Show, For } from 'solid-js';
-import { jsonPlaceholderFetch } from '../_util/jsonPlaceholderFetch.tsx';
+
+import { jsonPlaceholderFetch } from '../_util/jsonPlaceholderFetch';
 
 interface Album {
     title: string;

@@ -1,12 +1,12 @@
 ---
 import NavBar from "../navigation/NavBar.astro";
 import CommonPage from "../_page/CommonPage.astro";
-import User from "../_test/User.astro";
-import { AllJsonPlaceholderQueries } from "./jsonPlaceholder/AllJsonPlaceholderQueries.tsx";
+import { AllJsonPlaceholderQueries } from "./api/solidJsResources/AllJsonPlaceholderQueries.tsx";
+import RandomUser from "./api/astroFetchOnBuild/RandomUser.astro";
 ---
 
 <CommonPage>
 	<NavBar />
-	<User />
+	<RandomUser />
 	<AllJsonPlaceholderQueries />
 </CommonPage>
