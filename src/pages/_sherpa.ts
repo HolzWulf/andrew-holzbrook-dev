@@ -1,4 +1,4 @@
-import type { FeatureFlags } from "./FeatureFlags";
+import type { FeatureFlags } from "../lib/FeatureFlags";
 
 interface CommonQueryParams { }
 
