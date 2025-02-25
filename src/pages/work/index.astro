@@ -2,11 +2,20 @@
 import AppNavBar from "../_app/_AppNavBar.astro";
 import AppPage from "../_app/_AppPage.astro";
 import AppPageBody from "../_app/_AppPageBody.astro";
+import GoalsSection from "./_GoalsSection.astro";
+import ProfessionalSummary from "./_ProfessionalSummary.astro";
+import PreviousRolesCard from "./_PreviousRolesCard.astro";
+import ProjectsCard from "./_ProjectsCard.astro";
+import WorkPageHeader from "./_WorkPageHeader.astro";
 ---
 
 <AppPage>
     <AppNavBar />
     <AppPageBody>
-        <h1>Work Page</h1>
+        <WorkPageHeader />
+        <ProfessionalSummary />
+        <GoalsSection />
+        <PreviousRolesCard />
+        <ProjectsCard />
     </AppPageBody>
 </AppPage>
