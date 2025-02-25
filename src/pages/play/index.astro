@@ -1,5 +1,12 @@
 ---
-import PlayPage from "./_PlayPage.astro";
+import AppNavBar from "../_app/_AppNavBar.astro";
+import AppPage from "../_app/_AppPage.astro";
+import AppPageBody from "../_app/_AppPageBody.astro";
 ---
 
-<PlayPage />
+<AppPage>
+    <AppNavBar />
+    <AppPageBody>
+        <h1>Play Page</h1>
+    </AppPageBody>
+</AppPage>

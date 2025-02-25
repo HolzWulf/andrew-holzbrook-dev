@@ -1,5 +1,12 @@
 ---
-import HomePage from "./_HomePage.astro";
+import AppPage from "./_app/_AppPage.astro";
+import AppNavBar from "./_app/_AppNavBar.astro";
+import AppPageBody from "./_app/_AppPageBody.astro";
 ---
 
-<HomePage />
+<AppPage>
+    <AppNavBar />
+    <AppPageBody>
+        <h1 class="text-gray-500">Home Page</h1>
+    </AppPageBody>
+</AppPage>

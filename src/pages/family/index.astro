@@ -1,5 +1,13 @@
 ---
-import FamilyPage from "./_FamilyPage.astro";
+import AppNavBar from "../_app/_AppNavBar.astro";
+import AppPage from "../_app/_AppPage.astro";
+import AppPageBody from "../_app/_AppPageBody.astro";
+import FamilyMemberList from "../family/_ui/FamilyMemberList.astro";
 ---
 
-<FamilyPage />
+<AppPage>
+    <AppNavBar />
+    <AppPageBody>
+        <FamilyMemberList />
+    </AppPageBody>
+</AppPage>
