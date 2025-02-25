@@ -1,6 +1,3 @@
-import { Posts } from '../_data/Posts';
-import { Comments } from '../_data/Comments';
-
 interface JsonPlaceholderFetchProps {
     path: string;
 }
