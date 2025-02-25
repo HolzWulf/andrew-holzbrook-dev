@@ -1,10 +1,13 @@
 ---
 import AppNavBar from "../_app/_AppNavBar.astro";
 import AppPage from "../_app/_AppPage.astro";
+import AppPageBody from "../_app/_AppPageBody.astro";
 import FamilyMemberList from "../family/_ui/FamilyMemberList.astro";
 ---
 
 <AppPage>
 	<AppNavBar />
-	<FamilyMemberList />
+	<AppPageBody>
+		<FamilyMemberList />
+	</AppPageBody>
 </AppPage>
