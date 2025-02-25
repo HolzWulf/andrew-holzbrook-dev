@@ -1,0 +1,18 @@
+---
+/**
+ * Nav.astro
+ *
+ * Navigation component with customizable links.
+ */
+import { makeSherpa } from "../../pages/_sherpa";
+
+const sherpa = makeSherpa();
+---
+
+<nav>
+    <ul class="flex gap-6 text-lg mx-4">
+        <li><a href={sherpa.work({})}>Work</a></li>
+        <li><a href={sherpa.family({})}>Family</a></li>
+        <li><a href={sherpa.play({})}>Play</a></li>
+    </ul>
+</nav>

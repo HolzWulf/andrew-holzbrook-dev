@@ -1,9 +1,9 @@
 ---
-import { makeSherpa } from "../../pages/_sherpa";
-
-const sherpa = makeSherpa();
+import AppNavMenu from "./_AppNavMenu.astro";
+import AppLogo from "./_AppLogo.astro";
 ---
 
-<a href={sherpa.work({})}>Work</a>
-<a href={sherpa.family({})}>Family</a>
-<a href={sherpa.play({})}>Play</a>
+<header class="w-full flex justify-between items-center">
+    <AppLogo />
+    <AppNavMenu />
+</header>
