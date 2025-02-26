@@ -1,3 +1,3 @@
 export interface FeatureFlags {
-    testPageEnabled: boolean;
+  testPageEnabled: boolean;
 }

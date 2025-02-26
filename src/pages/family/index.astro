@@ -1,6 +1,6 @@
 ---
 import AppFooter from "../_app/_AppFooter.astro";
-import AppHeaderCommon from "../_app/_AppHeaderCommon.astro";
+import AppHeader from "../_app/_AppHeader.astro";
 import AppHeroSection from "../_app/_AppHeroSection.astro";
 import AppPage from "../_app/_AppPage.astro";
 import AppPageBody from "../_app/_AppPageBody.astro";
@@ -8,24 +8,21 @@ import FamilyMemberList from "./_familyMember/FamilyMemberList.astro";
 ---
 
 <AppPage>
-    <AppHeaderCommon />
+  <AppHeader />
 
-    <AppPageBody
-        backgroundColor="bg-gray-100"
-        class="flex flex-col min-h-screen"
-    >
-        <AppHeroSection
-            title="Meet My Family"
-            subtitle="Get to know the wonderful people who shape my world."
-        />
+  <AppPageBody backgroundColor="bg-gray-100" class="flex flex-col min-h-screen">
+    <AppHeroSection
+      title="Meet My Family"
+      subtitle="Get to know the wonderful people who shape my world."
+    />
 
-        <!-- Family Members Section -->
-        <section class="py-12">
-            <div class="max-w-6xl mx-auto px-6">
-                <FamilyMemberList />
-            </div>
-        </section>
+    <!-- Family Members Section -->
+    <section class="py-12">
+      <div class="max-w-6xl mx-auto px-6">
+        <FamilyMemberList />
+      </div>
+    </section>
 
-        <AppFooter />
-    </AppPageBody>
+    <AppFooter />
+  </AppPageBody>
 </AppPage>

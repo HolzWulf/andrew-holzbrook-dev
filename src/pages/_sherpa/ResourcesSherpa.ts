@@ -9,5 +9,6 @@ export const makeResourcesSherpa = (
   path: string,
   config: SherpaConfig = defaultSherpaConfig,
 ): ResourcesSherpa => ({
-  logo: (props) => makeLinkResolver(`${path}logo-placeholder.jpg`, props, config),
+  logo: (props) =>
+    makeLinkResolver(`${path}logo-placeholder.jpg`, props, config),
 });

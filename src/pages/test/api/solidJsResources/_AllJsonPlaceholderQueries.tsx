@@ -6,14 +6,14 @@ import { Todos } from "./_data/Todos";
 import { Users } from "./_data/Users";
 
 export function AllJsonPlaceholderQueries() {
-    return (
-        <div>
-            <Posts />
-            <Comments />
-            <Albums />
-            <Photos />
-            <Todos />
-            <Users />
-        </div>
-    );
+  return (
+    <div>
+      <Posts />
+      <Comments />
+      <Albums />
+      <Photos />
+      <Todos />
+      <Users />
+    </div>
+  );
 }

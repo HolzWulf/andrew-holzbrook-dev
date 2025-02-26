@@ -1,0 +1,22 @@
+---
+import AppNavMenu from "./_AppNavMenu.astro";
+import AppLogoLink from "./_AppLogoLink.astro";
+
+interface Props {
+  class?: string;
+}
+
+const props: Props = Astro.props;
+---
+
+<header
+  class={`fixed top-0 left-0 right-0 z-50 bg-orange-300 shadow-md w-full flex justify-between items-center h-24 ${props.class}`}
+>
+  <div
+    class="my-4 mx-4 max-w-screen-md w-full mx-auto flex justify-between items-center"
+  >
+    <AppLogoLink class="inline p-0 m-0" />
+    <AppNavMenu />
+  </div>
+</header>
+<div class="h-24">{" "}</div>

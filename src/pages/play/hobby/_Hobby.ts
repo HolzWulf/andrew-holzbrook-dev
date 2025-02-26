@@ -1,5 +1,4 @@
-
 export interface Hobby {
-    name: string;
-    href: string;
+  name: string;
+  href: string;
 }

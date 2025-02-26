@@ -4,8 +4,14 @@ import AppLink from "./_AppLink.astro";
 import AppLogo from "./_AppLogo.astro";
 
 const sherpa = makeSherpa();
+
+interface Props {
+  class?: string;
+}
+
+const props = Astro.props;
 ---
 
-<AppLink href={sherpa.home({})}>
+<AppLink href={sherpa.home({})} class={props.class}>
   <AppLogo />
 </AppLink>

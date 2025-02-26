@@ -12,48 +12,48 @@ const currentPath = Astro.url.pathname;
 ---
 
 <nav>
-    <ul class="flex gap-6 text-lg mx-4">
-        <li>
-            <AppLink
-                href={currentPath === sherpa.work.index({})
-                    ? undefined
-                    : sherpa.work.index({})}
-                class={`${
-                    currentPath === sherpa.work.index({})
-                        ? "underline"
-                        : "hover:underline"
-                }`}
-            >
-                Work
-            </AppLink>
-        </li>
-        <li>
-            <AppLink
-                href={currentPath === sherpa.family.index({})
-                    ? undefined
-                    : sherpa.family.index({})}
-                class={`${
-                    currentPath === sherpa.family.index({})
-                        ? "underline"
-                        : "hover:underline"
-                }`}
-            >
-                Family
-            </AppLink>
-        </li>
-        <li>
-            <AppLink
-                href={currentPath === sherpa.play.index({})
-                    ? undefined
-                    : sherpa.play.index({})}
-                class={`${
-                    currentPath === sherpa.play.index({})
-                        ? "underline"
-                        : "hover:underline"
-                }`}
-            >
-                Play
-            </AppLink>
-        </li>
-    </ul>
+  <ul class="flex gap-6 text-lg mx-4">
+    <li>
+      <AppLink
+        href={currentPath === sherpa.work.index({})
+          ? undefined
+          : sherpa.work.index({})}
+        class={`${
+          currentPath === sherpa.work.index({})
+            ? "underline"
+            : "hover:underline"
+        }`}
+      >
+        Work
+      </AppLink>
+    </li>
+    <li>
+      <AppLink
+        href={currentPath === sherpa.family.index({})
+          ? undefined
+          : sherpa.family.index({})}
+        class={`${
+          currentPath === sherpa.family.index({})
+            ? "underline"
+            : "hover:underline"
+        }`}
+      >
+        Family
+      </AppLink>
+    </li>
+    <li>
+      <AppLink
+        href={currentPath === sherpa.play.index({})
+          ? undefined
+          : sherpa.play.index({})}
+        class={`${
+          currentPath === sherpa.play.index({})
+            ? "underline"
+            : "hover:underline"
+        }`}
+      >
+        Play
+      </AppLink>
+    </li>
+  </ul>
 </nav>

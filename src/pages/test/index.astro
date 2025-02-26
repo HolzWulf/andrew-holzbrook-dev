@@ -1,13 +1,13 @@
 ---
 import AppPage from "../_app/_AppPage.astro";
-import AppHeaderCommon from "../_app/_AppHeaderCommon.astro";
+import AppHeader from "../_app/_AppHeader.astro";
 import { AllJsonPlaceholderQueries } from "./api/solidJsResources/_AllJsonPlaceholderQueries.tsx";
 import RandomUser from "./api/astroFetchOnBuild/RandomUser.astro";
 import AppPageBody from "../_app/_AppPageBody.astro";
 ---
 
 <AppPage>
-    <AppHeaderCommon />
+    <AppHeader />
     <AppPageBody>
         <RandomUser />
         <AllJsonPlaceholderQueries />

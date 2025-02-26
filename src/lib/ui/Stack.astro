@@ -8,11 +8,11 @@
  *  - as: HTML tag to render (default: 'div')
  */
 const {
-    as: Tag = "div",
-    direction = "column",
-    spacing = "4",
-    class: className = "",
-    ...rest
+  as: Tag = "div",
+  direction = "column",
+  spacing = "4",
+  class: className = "",
+  ...rest
 } = Astro.props;
 
 const directionClass = direction === "row" ? "flex-row" : "flex-col";
@@ -20,5 +20,5 @@ const spacingClass = `gap-${spacing}`;
 ---
 
 <Tag class={`flex ${directionClass} ${spacingClass} ${className}`} {...rest}>
-    <slot />
+  <slot />
 </Tag>

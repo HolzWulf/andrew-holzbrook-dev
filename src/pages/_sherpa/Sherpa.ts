@@ -23,5 +23,9 @@ export const makeSherpa = (
   resources: makeResourcesSherpa("/", config),
   work: makeWorkSherpa("/work", config),
   test: (props) =>
-    makeLinkResolver(config.featureFlags?.testPageEnabled ? "/test" : "/", props, config),
+    makeLinkResolver(
+      config.featureFlags?.testPageEnabled ? "/test" : "/",
+      props,
+      config,
+    ),
 });

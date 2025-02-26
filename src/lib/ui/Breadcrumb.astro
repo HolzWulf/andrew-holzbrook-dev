@@ -1,7 +1,7 @@
 ---
 interface Props {
-    label: string;
-    href?: string;
+  label: string;
+  href?: string;
 }
 
 const props: Props = Astro.props;
@@ -10,13 +10,13 @@ const label = props.label;
 ---
 
 <li>
-    {
-        href ? (
-            <a href={href} class="text-blue-600 hover:underline">
-                {label}
-            </a>
-        ) : (
-            <span class="text-gray-400">{label}</span>
-        )
-    }
+  {
+    href ? (
+      <a href={href} class="text-blue-600 hover:underline">
+        {label}
+      </a>
+    ) : (
+      <span class="text-gray-400">{label}</span>
+    )
+  }
 </li>

@@ -1,21 +1,21 @@
 ---
 interface Props {
-    href?: string | null;
-    class?: string;
-    target?: string;
+  href?: string | null;
+  class?: string;
+  target?: string;
 }
 
 const props = Astro.props;
 ---
 
 {
-    props.href == null ? (
-        <span class={props.class}>
-            <slot />
-        </span>
-    ) : (
-        <a href={props.href} class={props.class} target={props.target}>
-            <slot />
-        </a>
-    )
+  props.href == null ? (
+    <span class={props.class}>
+      <slot />
+    </span>
+  ) : (
+    <a href={props.href} class={props.class} target={props.target}>
+      <slot />
+    </a>
+  )
 }

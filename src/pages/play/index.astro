@@ -1,6 +1,6 @@
 ---
 import { hobbies } from "./hobby/_hobbies";
-import AppHeaderCommon from "../_app/_AppHeaderCommon.astro";
+import AppHeader from "../_app/_AppHeader.astro";
 import AppLink from "../_app/_AppLink.astro";
 import AppPage from "../_app/_AppPage.astro";
 import AppPageBody from "../_app/_AppPageBody.astro";
@@ -10,39 +10,34 @@ import AppHeroSection from "../_app/_AppHeroSection.astro";
 ---
 
 <AppPage>
-    <AppHeaderCommon />
+  <AppHeader />
 
-    <AppPageBody
-        backgroundColor="bg-gray-100"
-        class="flex flex-col min-h-screen"
-    >
-        <AppHeroSection
-            title="My Hobbies"
-            subtitle="Explore the things I enjoy doing in my free time."
-        />
+  <AppPageBody backgroundColor="bg-gray-100" class="flex flex-col min-h-screen">
+    <AppHeroSection
+      title="My Hobbies"
+      subtitle="Explore the things I enjoy doing in my free time."
+    />
 
-        <!-- Hobbies Section -->
-        <section class="py-12">
-            <div class="max-w-6xl mx-auto px-6">
-                <!-- Grid Layout for Desktop, Single Column for Mobile -->
-                <div
-                    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
-                >
-                    {
-                        hobbies.map((hobby) => (
-                            <AppLink href={hobby.href} class="block">
-                                <Card class="shadow-lg hover:shadow-2xl transition-shadow duration-300">
-                                    <h2 class="text-xl font-semibold text-gray-800">
-                                        {hobby.name}
-                                    </h2>
-                                </Card>
-                            </AppLink>
-                        ))
-                    }
-                </div>
-            </div>
-        </section>
+    <!-- Hobbies Section -->
+    <section class="py-12">
+      <div class="max-w-6xl mx-auto px-6">
+        <!-- Grid Layout for Desktop, Single Column for Mobile -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {
+            hobbies.map((hobby) => (
+              <AppLink href={hobby.href} class="block">
+                <Card class="shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                  <h2 class="text-xl font-semibold text-gray-800">
+                    {hobby.name}
+                  </h2>
+                </Card>
+              </AppLink>
+            ))
+          }
+        </div>
+      </div>
+    </section>
 
-        <AppFooter />
-    </AppPageBody>
+    <AppFooter />
+  </AppPageBody>
 </AppPage>

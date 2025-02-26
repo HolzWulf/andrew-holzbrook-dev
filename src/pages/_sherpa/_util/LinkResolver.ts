@@ -1,6 +1,6 @@
 import { type SherpaConfig } from "./SherpaConfig";
 
-export interface CommonQueryParams { }
+export interface CommonQueryParams {}
 
 export interface LinkProps {
   commonQueryParams?: CommonQueryParams;

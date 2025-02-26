@@ -7,13 +7,13 @@
  *  - as: HTML tag to render (default: 'div')
  */
 const {
-    as: Tag = "div",
-    spacing = "4",
-    class: className = "",
-    ...rest
+  as: Tag = "div",
+  spacing = "4",
+  class: className = "",
+  ...rest
 } = Astro.props;
 ---
 
 <Tag class={`flex flex-row gap-${spacing} ${className}`} {...rest}>
-    <slot />
+  <slot />
 </Tag>
