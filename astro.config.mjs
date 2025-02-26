@@ -2,7 +2,6 @@
 import { defineConfig } from "astro/config";
 
 import netlify from '@astrojs/netlify';
-import solidJs from "@astrojs/solid-js";
 
 import tailwindcss from "@tailwindcss/vite";
 
@@ -13,9 +12,6 @@ export default defineConfig({
   output: 'static',
   outDir: 'dist',
   cacheDir: 'cache',
-  integrations: [
-    solidJs(),
-  ],
   vite: {
     clearScreen: false,
     plugins: [tailwindcss()],
