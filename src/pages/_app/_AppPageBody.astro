@@ -1,14 +1,16 @@
 ---
-import Stack from "../../lib/ui/Stack.astro";
+import Box from "../../lib/ui/Box.astro";
 
 interface Props {
     class?: string;
+    backgroundColor?: string;
 }
 
 const props: Props = Astro.props;
 const className = props.class ?? "";
+const backgroundColor = props.backgroundColor ?? "bg-gray-100";
 ---
 
-<Stack class={`h-screen bg-gray-100 py-8 px-4 ${className}`}>
+<Box class={`${backgroundColor} ${className}`}>
     <slot />
-</Stack>
+</Box>
