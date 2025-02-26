@@ -3,6 +3,8 @@ import AppPage from "./_app/_AppPage.astro";
 import AppPageBody from "./_app/_AppPageBody.astro";
 import AppLink from "./_app/_AppLink.astro";
 import { makeSherpa } from "./_sherpa/Sherpa";
+import AppFooter from "./_app/_AppFooter.astro";
+import AppHeroSection from "./_app/_AppHeroSection.astro";
 
 const sherpa = makeSherpa();
 
@@ -32,26 +34,19 @@ const playSection = {
     bgColor: "bg-red-100",
     cta: "See What I'm Playing",
 };
+
+const currentYear = new Date().getFullYear(); // Get the current year
 ---
 
 <AppPage>
-    <AppPageBody backgroundColor="bg-gray-100">
-        <!-- Hero Section -->
-        <section
-            class="relative py-24 lg:py-32 text-center bg-gradient-to-br from-orange-300 via-white to-orange-100"
-        >
-            <div class="max-w-4xl mx-auto px-6">
-                <h1
-                    class="text-6xl lg:text-7xl font-extrabold text-gray-800 leading-tight mb-6"
-                >
-                    Andrew Hol(z)brook
-                </h1>
-                <p class="text-xl lg:text-2xl text-gray-700 mb-10">
-                    Building systems that simplify life. Exploring how family,
-                    play, and a touch of AI make everything better.
-                </p>
-            </div>
-        </section>
+    <AppPageBody
+        backgroundColor="bg-gray-100"
+        class="flex flex-col min-h-screen"
+    >
+        <AppHeroSection
+            title="Andrew Hol(z)brook"
+            subtitle="Building systems that simplify life. Exploring how family, play, and a touch of AI make everything better."
+        />
 
         <!-- Work, Family, Play in a Row on Large Screens -->
         <section class="py-12">
@@ -113,5 +108,7 @@ const playSection = {
                 </div>
             </div>
         </section>
+
+        <AppFooter />
     </AppPageBody>
 </AppPage>

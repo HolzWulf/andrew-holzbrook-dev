@@ -1,28 +1,43 @@
 ---
+import Breadcrumb from "../../../lib/ui/Breadcrumb.astro";
+import Breadcrumbs from "../../../lib/ui/Breadcrumbs.astro";
+import AppFooter from "../../_app/_AppFooter.astro";
 import AppHeaderCommon from "../../_app/_AppHeaderCommon.astro";
 import AppPage from "../../_app/_AppPage.astro";
 import AppPageBody from "../../_app/_AppPageBody.astro";
+import { makeSherpa } from "../../_sherpa/Sherpa";
+
+const sherpa = makeSherpa();
 ---
 
 <AppPage>
     <AppHeaderCommon />
-    <AppPageBody>
-        <section class="p-6 bg-gray-100 rounded-2xl shadow-md">
-            <h2 class="text-2xl font-bold mb-4">Board Games</h2>
-            <p>
+    <AppPageBody class="flex flex-col min-h-screen bg-gray-100">
+        <Breadcrumbs>
+            <Breadcrumb label="Play" href={sherpa.play.index({})} />
+            <Breadcrumb label="Board Games" />
+        </Breadcrumbs>
+
+        <section
+            class="max-w-4xl mx-auto p-6 mt-12 bg-white rounded-2xl shadow-md"
+        >
+            <h2 class="text-2xl lg:text-3xl font-bold mb-6 text-gray-800">
+                Board Games
+            </h2>
+            <p class="text-lg text-gray-700 mb-4">
                 I've always loved gaming of any kind. Board games take a special
                 place in my life though.
             </p>
-            <br />
-            <p>
+            <p class="text-lg text-gray-700 mb-4">
                 The variety of gameplay, the tactile feel, the shared triumph.
             </p>
-            <br />
-            <p>
-                Some of the games we've ejoyed playing are Gloomhaven, Mansions
+            <p class="text-lg text-gray-700 mb-4">
+                Some of the games we've enjoyed playing are Gloomhaven, Mansions
                 of Madness, Decrypted, Marvel Champions LCG, Arkham Horror LCG,
                 Moon, Vast, Root, and more.
             </p>
         </section>
+
+        <AppFooter />
     </AppPageBody>
 </AppPage>

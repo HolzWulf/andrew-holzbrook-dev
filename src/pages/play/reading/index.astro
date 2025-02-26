@@ -1,48 +1,60 @@
 ---
+import Breadcrumb from "../../../lib/ui/Breadcrumb.astro";
+import Breadcrumbs from "../../../lib/ui/Breadcrumbs.astro";
+import AppFooter from "../../_app/_AppFooter.astro";
 import AppHeaderCommon from "../../_app/_AppHeaderCommon.astro";
 import AppPage from "../../_app/_AppPage.astro";
 import AppPageBody from "../../_app/_AppPageBody.astro";
+import { makeSherpa } from "../../_sherpa/Sherpa";
+
+const sherpa = makeSherpa();
 ---
 
 <AppPage>
     <AppHeaderCommon />
-    <AppPageBody>
-        <section class="p-6 bg-gray-100 rounded-2xl shadow-md">
-            <h1 class="text-2xl font-bold mb-4">Reading</h1>
-            <p>I love to read.</p>
-            <br />
-            <p>
+    <AppPageBody class="flex flex-col min-h-screen bg-gray-100">
+        <Breadcrumbs>
+            <Breadcrumb label="Play" href={sherpa.play.index({})} />
+            <Breadcrumb label="Reading" />
+        </Breadcrumbs>
+
+        <section
+            class="max-w-4xl mx-auto p-6 mt-12 bg-white rounded-2xl shadow-md"
+        >
+            <h1 class="text-2xl lg:text-3xl font-bold mb-6 text-gray-800">
+                Reading
+            </h1>
+            <p class="text-lg text-gray-700 mb-4">I love to read.</p>
+            <p class="text-lg text-gray-700 mb-4">
                 However, my mind wanders a lot, and, well... I love to let it
                 wander. So I will often read out loud to keep myself on track.
                 This has lead me to really love acting out the dialog and it has
                 helped keep me anchored to the book when I'm trying to read and
                 can't focus.
             </p>
-            <br />
-            <p>
+            <p class="text-lg text-gray-700 mb-4">
                 It can take me a long time to get through a book. Reading out
                 loud just takes longer. As of this writing, I've been reading
                 Ship of Magic by Robin Hobb for over a year, and that has made
                 for a great year of reading for me. I've never related more to
-                so many different characters. The world building is phenominal.
+                so many different characters. The world building is phenomenal.
             </p>
-            <br />
-            <p>
+            <p class="text-lg text-gray-700 mb-4">
                 I really enjoy living with a book for a long time, so it doesn't
                 bother me that some books might take me a lot longer.
             </p>
-            <br />
-            <p>
+            <p class="text-lg text-gray-700 mb-4">
                 Thanks to my habit of reading out loud to myself, I've found
                 great joy in reading books to my boys every night before bed. We
                 do this on a rotation, and every once in a while Wren will take
                 a turn in the rotation.
             </p>
-            <br />
-            <p>
+            <p class="text-lg text-gray-700 mb-4">
                 Oakley has long since outgrown my reading out loud and has taken
                 off with reading on her own.
             </p>
         </section>
+
+        <AppFooter />
     </AppPageBody>
 </AppPage>

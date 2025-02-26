@@ -8,12 +8,46 @@ import { makeSherpa } from "../_sherpa/Sherpa";
 import AppLink from "./_AppLink.astro";
 
 const sherpa = makeSherpa();
+const currentPath = Astro.url.pathname;
 ---
 
 <nav>
     <ul class="flex gap-6 text-lg mx-4">
-        <li><AppLink href={sherpa.work.index({})}>Work</AppLink></li>
-        <li><AppLink href={sherpa.family.index({})}>Family</AppLink></li>
-        <li><AppLink href={sherpa.play.index({})}>Play</AppLink></li>
+        <li>
+            <AppLink
+                href={sherpa.work.index({})}
+                class={`${
+                    currentPath === sherpa.work.index({})
+                        ? "underline"
+                        : "hover:underline"
+                }`}
+            >
+                Work
+            </AppLink>
+        </li>
+        <li>
+            <AppLink
+                href={sherpa.family.index({})}
+                class={`${
+                    currentPath === sherpa.family.index({})
+                        ? "underline"
+                        : "hover:underline"
+                }`}
+            >
+                Family
+            </AppLink>
+        </li>
+        <li>
+            <AppLink
+                href={sherpa.play.index({})}
+                class={`${
+                    currentPath === sherpa.play.index({})
+                        ? "underline"
+                        : "hover:underline"
+                }`}
+            >
+                Play
+            </AppLink>
+        </li>
     </ul>
 </nav>

@@ -1,0 +1,16 @@
+---
+// PrintButton.astro
+const { class: customClass = "" } = Astro.props;
+---
+
+<button
+    class={`fixed bottom-6 left-1/2 transform -translate-x-1/2 mb-4 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 ${customClass}`}
+    id="print-button"
+>
+    Print Resume
+</button>
+
+<script>
+    const printButton = document.getElementById("print-button");
+    printButton?.addEventListener("click", () => window.print());
+</script>
