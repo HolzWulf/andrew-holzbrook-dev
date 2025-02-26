@@ -1,6 +1,6 @@
 import { createResource, Show, For } from "solid-js";
 
-import { jsonPlaceholderFetch } from "../_util/jsonPlaceholderFetch";
+import { jsonPlaceholderFetch } from "../_util/_jsonPlaceholderFetch";
 
 interface Todo {
   userId: number;
