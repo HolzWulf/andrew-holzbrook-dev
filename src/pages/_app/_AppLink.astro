@@ -1,7 +1,8 @@
 ---
 interface Props {
-    href?: string;
+    href?: string | null;
     class?: string;
+    target?: string;
 }
 
 const props = Astro.props;
@@ -13,7 +14,7 @@ const props = Astro.props;
             <slot />
         </span>
     ) : (
-        <a href={props.href} class={props.class}>
+        <a href={props.href} class={props.class} target={props.target}>
             <slot />
         </a>
     )

@@ -15,7 +15,9 @@ const currentPath = Astro.url.pathname;
     <ul class="flex gap-6 text-lg mx-4">
         <li>
             <AppLink
-                href={sherpa.work.index({})}
+                href={currentPath === sherpa.work.index({})
+                    ? undefined
+                    : sherpa.work.index({})}
                 class={`${
                     currentPath === sherpa.work.index({})
                         ? "underline"
@@ -27,7 +29,9 @@ const currentPath = Astro.url.pathname;
         </li>
         <li>
             <AppLink
-                href={sherpa.family.index({})}
+                href={currentPath === sherpa.family.index({})
+                    ? undefined
+                    : sherpa.family.index({})}
                 class={`${
                     currentPath === sherpa.family.index({})
                         ? "underline"
@@ -39,7 +43,9 @@ const currentPath = Astro.url.pathname;
         </li>
         <li>
             <AppLink
-                href={sherpa.play.index({})}
+                href={currentPath === sherpa.play.index({})
+                    ? undefined
+                    : sherpa.play.index({})}
                 class={`${
                     currentPath === sherpa.play.index({})
                         ? "underline"

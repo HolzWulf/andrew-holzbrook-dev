@@ -1,5 +1,12 @@
 ---
 import "./src/styles/global.css";
+
+interface Props {
+  class?: string;
+  backgroundColor?: string;
+}
+
+const props: Props = Astro.props;
 ---
 
 <!doctype html>
@@ -12,7 +19,9 @@ import "./src/styles/global.css";
     <title>Andrew Hol(z)brook</title>
   </head>
 
-  <body class="bg-white w-1/1 h-1/1 m-0">
+  <body
+    class=`${props.backgroundColor ?? 'bg-white'} w-1/1 h-1/1 m-0 ${props.class}`
+  >
     <slot />
   </body>
 </html>
