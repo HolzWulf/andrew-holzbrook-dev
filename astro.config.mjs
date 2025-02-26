@@ -11,10 +11,10 @@ export default defineConfig({
   adapter: netlify(),
   site: 'https://holzbrook.dev',
   output: 'static',
-  outDir: './dist',
-  cacheDir: './cache',
+  outDir: 'dist',
+  cacheDir: 'cache',
   integrations: [
-    solidJs({ devtools: true }),
+    solidJs(),
   ],
   vite: {
     clearScreen: false,
