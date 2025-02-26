@@ -5,7 +5,7 @@ import { Posts } from "./_data/Posts";
 import { Todos } from "./_data/Todos";
 import { Users } from "./_data/Users";
 
-export function AllJsonPlaceholderQueries() {
+export function AllSampleQueries() {
   return (
     <div>
       <Posts />
