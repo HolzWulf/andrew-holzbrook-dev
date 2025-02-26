@@ -1,9 +1,9 @@
-import { makeLinkResolver, type LinkResolver } from "./_util/LinkResolver";
-import { defaultSherpaConfig, type SherpaConfig } from "./_util/SherpaConfig";
-import { makePlaySherpa, type PlaySherpa } from "./PlaySherpa";
-import { makeWorkSherpa, type WorkSherpa } from "./WorkSherpa";
-import { makeFamilySherpa, type FamilySherpa } from "./FamilySherpa";
-import { makeResourcesSherpa, type ResourcesSherpa } from "./ResourcesSherpa";
+import { makeLinkResolver, type LinkResolver } from "./_util/_LinkResolver";
+import { defaultSherpaConfig, type SherpaConfig } from "./_util/_SherpaConfig";
+import { makePlaySherpa, type PlaySherpa } from "./_PlaySherpa";
+import { makeWorkSherpa, type WorkSherpa } from "./_WorkSherpa";
+import { makeFamilySherpa, type FamilySherpa } from "./_FamilySherpa";
+import { makeResourcesSherpa, type ResourcesSherpa } from "./_ResourcesSherpa";
 
 interface Sherpa {
   family: FamilySherpa;

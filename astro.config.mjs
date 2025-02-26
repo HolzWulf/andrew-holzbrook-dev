@@ -7,8 +7,8 @@ import tailwindcss from "@tailwindcss/vite";
 
 // https://astro.build/config
 export default defineConfig({
-  output: 'static',
-  outDir: './dist',
+  output: 'server',
+  outDir: './build',
   integrations: [solidJs({ devtools: true })],
   vite: {
     clearScreen: false,

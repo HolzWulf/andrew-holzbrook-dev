@@ -1,5 +1,5 @@
-import { makeLinkResolver, type LinkResolver } from "./_util/LinkResolver";
-import { defaultSherpaConfig, type SherpaConfig } from "./_util/SherpaConfig";
+import { makeLinkResolver, type LinkResolver } from "./_util/_LinkResolver";
+import { defaultSherpaConfig, type SherpaConfig } from "./_util/_SherpaConfig";
 
 export interface FamilySherpa {
   index: LinkResolver;
