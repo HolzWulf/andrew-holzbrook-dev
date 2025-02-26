@@ -3,6 +3,7 @@ import Breadcrumb from "../../../lib/ui/Breadcrumb.astro";
 import Breadcrumbs from "../../../lib/ui/Breadcrumbs.astro";
 import AppFooter from "../../_app/_AppFooter.astro";
 import AppHeaderCommon from "../../_app/_AppHeaderCommon.astro";
+import AppHeroSection from "../../_app/_AppHeroSection.astro";
 import AppPage from "../../_app/_AppPage.astro";
 import AppPageBody from "../../_app/_AppPageBody.astro";
 import { makeSherpa } from "../../_sherpa/Sherpa";
@@ -13,6 +14,11 @@ const sherpa = makeSherpa();
 <AppPage>
     <AppHeaderCommon />
     <AppPageBody class="flex flex-col min-h-screen bg-gray-100">
+        <AppHeroSection
+            title="Reading"
+            subtitle="Wheel of Time, Game of Thrones, Hitchhiker's Guide"
+        />
+
         <Breadcrumbs>
             <Breadcrumb label="Play" href={sherpa.play.index({})} />
             <Breadcrumb label="Reading" />
