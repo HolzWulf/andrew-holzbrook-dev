@@ -1,6 +1,4 @@
 # build output
-build/
-cache/
 dist/
 
 # generated types
