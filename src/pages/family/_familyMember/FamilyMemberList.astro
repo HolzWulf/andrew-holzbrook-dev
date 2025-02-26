@@ -5,7 +5,7 @@ import VStack from "../../../lib/ui/VStack.astro";
 import { familyMembers } from "./_familyMembers/_familyMembers";
 ---
 
-<VStack as="ul" class="px-8 gap-4">
+<VStack as="ul" class="gap-4">
   {
     familyMembers.map((familyMember) => (
       <FamilyMemberListItem familyMember={familyMember} />

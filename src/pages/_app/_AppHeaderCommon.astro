@@ -3,9 +3,12 @@ import AppNavMenu from "./_AppNavMenu.astro";
 import AppLogoLink from "./_AppLogoLink.astro";
 ---
 
-<header class="w-full flex justify-between items-center h-24">
+<header
+    class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md w-full flex justify-between items-center h-24"
+>
     <div class="my-4 mx-4">
         <AppLogoLink />
     </div>
     <AppNavMenu />
 </header>
+<div class="h-24">&nbsp;</div>
