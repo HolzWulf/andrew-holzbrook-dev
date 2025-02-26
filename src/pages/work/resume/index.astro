@@ -1,0 +1,126 @@
+---
+import AppPage from "../../_app/_AppPage.astro";
+import AppPageBody from "../../_app/_AppPageBody.astro";
+import PrintButton from "../../_app/_PrintButton.astro";
+
+const name = "Andrew Holbrook";
+const title = "Senior Frontend Engineer";
+const email = "holz55@gmail.com";
+const phone = "801.361.0417";
+const summary =
+  "Senior Software Engineer with 10+ years in front-end development. Specializes in React, Next.js, and Flutter, focusing on scalable, high-performance applications. Experienced in leading teams and driving product innovation.";
+
+const workExperience = [
+  {
+    company: "Chatbooks",
+    title: "Senior Frontend Developer",
+    date: "March 2019 - December 2024",
+    highlights: [
+      "Optimized Flutter codebase by transitioning a mobile-first design to a fully responsive, desktop-ready solution, significantly improving cross-device performance.",
+      "Implemented Swagger/OpenAPI for streamlined code generation with React Query, simplifying mutation handling and improving API integration efficiency.",
+      "Launched a greenfield Next.js project, making key architectural decisions for scalable state management and form handling, laying the foundation for future development.",
+      "Led the development of a web cart, driving cross-functional collaboration and delivering a seamless shopping experience with improved performance.",
+      "Transitioned marketing site from WordPress to React + Prismic, modernizing the user experience and optimizing content management workflows.",
+    ],
+  },
+  {
+    company: "Sling TV",
+    title: "Senior Software Engineer",
+    date: "Feb 2018 - March 2019",
+    highlights: [
+      "Developed core features using AngularJS, SASS, and Redux, driving increased user engagement.",
+      "Consolidated AngularJS libraries, improving maintainability and reducing bundle size.",
+      "Modernized state management by transitioning to Redux, reducing bugs and improving application consistency.",
+    ],
+  },
+  {
+    company: "MasterControl",
+    title: "Software Engineer II",
+    date: "2014 - Feb 2018",
+    highlights: [
+      "Received Innovation Award for the QuickNav feature, significantly reducing task completion time.",
+      "Designed stateful UI architecture using ngrx/store, optimizing user experience and system performance.",
+      "Led a team of junior developers, boosting team velocity and ensuring high code quality.",
+    ],
+  },
+];
+---
+
+<AppPage backgroundColor="bg-gray-100">
+  <!-- Print Button -->
+  <PrintButton class="print:hidden m-4" />
+  <AppPageBody
+    class="mx-auto max-w-[8.5in] m-4 text-sm leading-relaxed font-inter py-4 px-4 sm:px-8 md:px-12 shadow-md"
+  >
+    <!-- Header Section -->
+    <header class="mb-6">
+      <div class="flex justify-between w-full mb-4">
+        <h1 class="text-3xl font-semibold mb-1 text-gray-900">
+          {name}
+        </h1>
+        <h2 class="text-gray-700">
+          {title}
+        </h2>
+      </div>
+      <address class="text-xs not-italic flex justify-between w-full mb-4">
+        <a href={`mailto:${email}`} class="w-3/5 text-gray-600 hover:underline">
+          {email}
+        </a>
+        <a
+          href={`tel:+1${phone.replace(/-/g, "")}`}
+          class="w-2/5 text-right text-gray-600 hover:underline"
+        >
+          {phone}
+        </a>
+      </address>
+    </header>
+
+    <!-- Professional Summary -->
+    <section class="mb-6 p-3 rounded-md">
+      <p class="leading-relaxed text-gray-800">{summary}</p>
+    </section>
+
+    <!-- Work Experience Section -->
+    <section class="mb-8">
+      <h2
+        class="text-xl font-bold text-gray-900 mb-3 border-b-2 border-gray-400 pb-1"
+      >
+        Work Experience
+      </h2>
+      <div class="space-y-5">
+        {
+          workExperience.map((job) => (
+            <article>
+              <header class="font-semibold text-base text-gray-900">
+                {job.company} - {job.title}{" "}
+                <span class="text-gray-600">({job.date})</span>
+              </header>
+              <ul class="list-disc ml-6 mt-2 space-y-1 text-sm text-gray-700">
+                {job.highlights.map((highlight) => (
+                  <li>
+                    <span
+                      class={
+                        highlight.includes(":")
+                          ? "text-gray-900"
+                          : "text-gray-600"
+                      }
+                    >
+                      {highlight}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </article>
+          ))
+        }
+      </div>
+    </section>
+
+    <!-- Education -->
+    <footer class="text-center mt-6 border-t border-gray-300 pt-4">
+      <p class="text-xs text-gray-600">
+        B.S. in Computer Science, Utah Valley University, April 2013
+      </p>
+    </footer>
+  </AppPageBody>
+</AppPage>

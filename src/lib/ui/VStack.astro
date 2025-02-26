@@ -1,0 +1,14 @@
+---
+/**
+ * VStack.astro
+ * Props:
+ *  - spacing: Tailwind spacing value (default: '4')
+ *  - class: Override/additional Tailwind classes
+ *  - as: HTML tag to render (default: 'div')
+ */
+const { as: Tag = "div", class: className = "", ...rest } = Astro.props;
+---
+
+<Tag class={`flex flex-col ${className}`} {...rest}>
+  <slot />
+</Tag>

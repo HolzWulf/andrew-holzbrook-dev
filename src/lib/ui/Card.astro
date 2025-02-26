@@ -1,0 +1,17 @@
+---
+import Box from "./Box.astro";
+import VStack from "./VStack.astro";
+
+/**
+ * Box.astro
+ * Generic Box component.
+ * Props:
+ *  - class: Override/additional Tailwind classes
+ *  - as: HTML tag to render (default: 'div')
+ */
+const { as: Tag = "div", class: className = "" } = Astro.props;
+---
+
+<Tag class={`p-4 bg-white rounded-xl shadow-lg ${className}`}>
+  <slot />
+</Tag>

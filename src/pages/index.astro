@@ -1,11 +1,111 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import AppPage from "./_app/_AppPage.astro";
+import AppPageBody from "./_app/_AppPageBody.astro";
+import AppLink from "./_app/_AppLink.astro";
+import { makeSherpa } from "./_sherpa/_Sherpa";
+import AppFooter from "./_app/_AppFooter.astro";
+import AppHeroSection from "./_app/_AppHeroSection.astro";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const sherpa = makeSherpa();
+
+const workSection = {
+  title: "Work",
+  description:
+    "A journey through my professional experience—projects, skills, and collaborations that shaped my career.",
+  link: sherpa.work.index({}),
+  bgColor: "bg-orange-100",
+  cta: "Explore Career",
+};
+
+const familySection = {
+  title: "Family",
+  description:
+    "Family is at the heart of everything I do. Discover the routines, habits, and moments that keep us growing together.",
+  link: sherpa.family.index({}),
+  bgColor: "bg-amber-100",
+  cta: "Meet the Family",
+};
+
+const playSection = {
+  title: "Play",
+  description:
+    "Exploring creativity through board games, tech experiments, and hobbies that bring joy and balance to life.",
+  link: sherpa.play.index({}),
+  bgColor: "bg-red-100",
+  cta: "See What I'm Playing",
+};
+
+const currentYear = new Date().getFullYear(); // Get the current year
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<AppPage>
+  <AppPageBody backgroundColor="bg-gray-100" class="flex flex-col min-h-screen">
+    <AppHeroSection
+      title="Andrew Hol(z)brook"
+      subtitle="Building systems that simplify life. Exploring how family, play, and a touch of AI make everything better."
+    />
+
+    <!-- Work, Family, Play in a Row on Large Screens -->
+    <section class="py-12">
+      <div
+        class="max-w-6xl mx-auto px-6 flex flex-col lg:flex-row lg:space-x-8 space-y-8 lg:space-y-0"
+      >
+        <!-- Work Section -->
+        <div
+          class={`flex-1 p-8 rounded-2xl shadow-lg ${workSection.bgColor} text-center`}
+        >
+          <h2 class="text-3xl font-semibold text-gray-800 mb-4">
+            {workSection.title}
+          </h2>
+          <p class="text-lg text-gray-600 mb-8">
+            {workSection.description}
+          </p>
+          <AppLink
+            href={workSection.link}
+            class="px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white rounded-lg shadow-lg transition-colors duration-300"
+          >
+            {workSection.cta}
+          </AppLink>
+        </div>
+
+        <!-- Family Section -->
+        <div
+          class={`flex-1 p-8 rounded-2xl shadow-lg ${familySection.bgColor} text-center`}
+        >
+          <h2 class="text-3xl font-semibold text-gray-800 mb-4">
+            {familySection.title}
+          </h2>
+          <p class="text-lg text-gray-600 mb-8">
+            {familySection.description}
+          </p>
+          <AppLink
+            href={familySection.link}
+            class="px-6 py-3 bg-amber-500 hover:bg-amber-600 text-white rounded-lg shadow-lg transition-colors duration-300"
+          >
+            {familySection.cta}
+          </AppLink>
+        </div>
+
+        <!-- Play Section -->
+        <div
+          class={`flex-1 p-8 rounded-2xl shadow-lg ${playSection.bgColor} text-center`}
+        >
+          <h2 class="text-3xl font-semibold text-gray-800 mb-4">
+            {playSection.title}
+          </h2>
+          <p class="text-lg text-gray-600 mb-8">
+            {playSection.description}
+          </p>
+          <AppLink
+            href={playSection.link}
+            class="px-6 py-3 bg-rose-500 hover:bg-rose-600 text-white rounded-lg shadow-lg transition-colors duration-300"
+          >
+            {playSection.cta}
+          </AppLink>
+        </div>
+      </div>
+    </section>
+
+    <AppFooter />
+  </AppPageBody>
+</AppPage>
